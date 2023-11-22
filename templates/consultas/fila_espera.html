@@ -1,0 +1,14 @@
+{% extends "home.html" %}
+
+{% block title %}Fila de Espera{% endblock %}
+
+{% block content %}
+<h4>Fila de Espera</h4>
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ models.as_p }}
+    <button type="submit" class="btn btn-sm btn-success">Enviar</button>
+</form>
+<br>
+<a class="btn btn-success" href="{% url 'home' %}">Voltar</a>
+{% endblock %}
